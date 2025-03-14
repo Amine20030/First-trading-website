@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style css/trade.css">
+    <title>Document</title>
+</head>
+<body>
+    <header><h2><a href="#" class="logo">TRADE</a></h2>
+        <ul>
+           <li><a href="index.html" >Home</a></li> 
+            <li><a href="trade.html" class="active" >Trade</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="login.html">Sign In</a></li>
+            </ul>
+        </header>
+        <section id="about" class="about">
+            <div class="container">
+                <h2>About eCoin</h2>
+                <p>eCoin is a decentralized cryptocurrency that allows for secure and fast transactions across the globe. Invest in eCoin today and join the future of digital finance.</p>
+            </div>
+        </section>
+    
+        <!-- Pricing Section -->
+        <section id="pricing" class="pricing">
+            <div class="container">
+                <h2>Current Pricing</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Currency</th>
+                            <th>Buy Price</th>
+                            <th>Sell Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>eCoin 💰 </td>
+                            <td>$50,000</td>
+                            <td>$49,000</td>
+                        </tr>
+                        <tr>
+                            <td>Bitcoin ₿ </td>
+                            <td>$60,000</td>
+                            <td>$59,000</td>
+                        </tr>
+                        <tr>
+                            <td>Ethereum € </td>
+                            <td>$4,000</td>
+                            <td>$3,900</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    
+        <!-- Trade Section -->
+        <section id="trade" class="trade">
+            <div class="container">
+                <h2>Trade eCoin</h2>
+                <form class="trade-form">
+                    <div class="form-group">
+                        <label for="trade-type">Trade Type</label>
+                        <select id="trade-type" name="trade-type">
+                            <option value="buy">Buy</option>
+                            <option value="sell">Sell</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="currency">Currency</label>
+                        <select id="currency" name="currency">
+                            <option value="ecoin">eCoin</option>
+                            <option value="bitcoin">Bitcoin</option>
+                            <option value="ethereum">Ethereum</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="amount">Amount</label>
+                        <input type="number" id="amount" name="amount" placeholder="Enter amount">
+                    </div>
+                    <button type="submit" class="trade-btn">Submit</button>
+                </form>
+            </div>
+        </section>
+       <!-- 
+    <script type="text/javascript">
+            window.onload = function () {
+                var chart = new CanvasJS.Chart("chartContainer",
+                {
+                    title:{
+                        text: "Basic Candle Stick Chart"
+                    },
+                    zoomEnabled: true,
+                    axisY: {
+                        includeZero:false,
+                        title: "Prices",
+                        prefix: "$ "
+                    },
+                    axisX: {
+                        interval:2,
+                        intervalType: "month",
+                        valueFormatString: "MMM-YY",
+                        labelAngle: -45
+                    },
+                    data: [
+                    {
+                        type: "candlestick",
+                        dataPoints: [ //y: [Open, High ,Low, Close]
+                            {x: new Date(2012,01,01),y:[5198, 5629, 5159, 5385]},
+                            {x: new Date(2012,02,01),y:[5366, 5499, 5135, 5295]},
+                            {x: new Date(2012,03,01),y:[5296, 5378, 5154, 5248]},
+                            {x: new Date(2012,04,01),y:[5254, 5279, 4788, 4924]},
+                            {x: new Date(2012,05,01),y:[4910, 5286, 4770, 5278]},
+                            {x: new Date(2012,06,01),y:[5283, 5348, 5032, 5229]},
+                            {x: new Date(2012,07,01),y:[5220, 5448, 5164, 5258]},
+                            {x: new Date(2012,08,01),y:[5276, 5735, 5215, 5703]},
+                            {x: new Date(2012,09,01),y:[5704, 5815, 4888, 5619]},
+                            {x: new Date(2012,10,01),y:[5609, 5885, 5548, 5879]},
+                            {x: new Date(2012,11,01),y:[5878, 5965, 5823, 5905]},
+                            {x: new Date(2013,00,01),y:[5937, 6111, 5935, 6034]},
+                            {x: new Date(2013,01,01),y:[6040, 6052, 5671, 5693]},
+                            {x: new Date(2013,02,01),y:[5702, 5971, 5604, 5682]},
+                            {x: new Date(2013,03,01),y:[5697, 5962, 5477, 5930]},
+                            {x: new Date(2013,04,01),y:[5911, 6229, 5910, 5985]},
+                            {x: new Date(2013,05,01),y:[5997, 6011, 5566, 5842]},
+                            {x: new Date(2013,06,01),y:[5834, 6093, 5675, 5742]},
+                            {x: new Date(2013,07,01),y:[5776, 5808, 5118, 5471]},
+                            {x: new Date(2013,08,01),y:[5480, 6142, 5318, 5735]},
+                            {x: new Date(2013,09,01),y:[5756, 6309, 5700, 6299]},
+                            {x: new Date(2013,10,01),y:[6289, 6342, 5972, 6176]},
+                            {x: new Date(2013,11,01),y:[6171, 6415, 6129, 6304]}
+                        ]
+                    }
+                    ]
+                });
+                chart.render();
+            }
+            </script>
+            <script type="text/javascript" src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+            <div id="chartContainer" style="height: 300px; width: 100%;">
+            -->
+            </div>
+            
+        <!-- Footer Section -->
+        <footer>
+            <div class="footer">
+                <div class="container">
+                    <div class="rr">
+                        <div class="col-md-12">
+                            <a class="logo_bottom" href="#">TRADE</a>
+                        </div>
+                        <div class="col-md-3 col-sm-6" ">
+                      <div class="Informa conta ">
+                         <h3>Contact Us</h3>
+                         <ul>
+                            <li> <a href="Javascript:void(0) "> <i class="fa fa-map-marker " aria-hidden="true "></i> Email
+                               </a>
+                            </li>
+                            <li> <a href="Javascript:void(0) "><i class="fa fa-phone " aria-hidden="true "></i> Call +2121234567890
+                               </a>
+                            </li>
+                            <li> <a href="Javascript:void(0) "> <i class="fa fa-envelope " aria-hidden="true "></i>support@tradewebsite.com
+                               </a>
+                            </li>
+                         </ul>
+                         
+                        
+                   </li>
+                            
+                         </ul>
+                      </div>
+                   </div>
+                   <div class="col-md-3 col-sm-6 "">
+                            <div class="Informa helpful">
+                                <h3>Useful Link</h3>
+                                <ul>
+                                    <li> <a href="Javascript:void(0) "> <i class="fa fa-envelope " aria-hidden="true "></i>Facebook
+                                    </a>
+                                 </li>
+                                 <li> <a href="Javascript:void(0) "> <i class="fa fa-envelope " aria-hidden="true "></i>Instagram
+                                 </a>
+                              </li>
+                              <li> <a href="Javascript:void(0) "> <i class="fa fa-envelope " aria-hidden="true "></i>Twitter
+                              </a>
+                           </li>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6" ">
+                      <div class="Informa ">
+                         <h3>Offices</h3>
+                         <ul>
+                            <ul>
+                                <li> <a href="Javascript:void(0) "> <i class="fa fa-envelope " aria-hidden="true "></i>New York
+                                </a>
+                             </li>
+                             <li> <a href="Javascript:void(0) "> <i class="fa fa-envelope " aria-hidden="true "></i>Dubai
+                             </a>
+                          </li>
+                          <li> <a href="Javascript:void(0) "> <i class="fa fa-envelope " aria-hidden="true "></i>Casa Blanca
+                          </a>
+                       </li>
+                         </ul>
+                      </div>
+                   </div>
+                   <div class="col-md-3 col-sm-6 ">
+                      <div class="Informa ">
+                         <h3>Newsletter</h3>
+                         <form class="newslatter_form ">
+                            <input class="ente " placeholder="Enter your email " type="text " name="Enter your email ">
+                            <button class="subs_btn ">Subscribe</button>
+                         </form>
+                      </div>
+                   </div>
+                </div>
+                
+             </div>
+          </div>
+          </footer>
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    </body>
+    
+</body>
+</html>

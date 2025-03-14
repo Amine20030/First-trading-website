@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style css/signup.css">
+    <title>Document</title>
+</head>
+<body>
+    <header><h2><a href="#" class="logo">TRADE</a></h2>
+        <ul>
+           <li><a href="index.html" >Home</a></li> 
+            <li><a href="trade.html">Trade</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="login.html" class="active" >Sign In</a></li>
+            </ul>
+        </header>
+        <div class="register-container">
+            <header>Register</header>
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="Full Name" id="name">
+            </div>
+            <div class="input-box">
+                <input type="email" class="input-field" placeholder="Email" id="email">
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" placeholder="Password" id="password">
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="Phone" id="phone">
+            </div>
+            <div class="input-box">
+                <input type="number" class="input-field" placeholder="Age" id="age">
+            </div>
+            <div class="input-box">
+                <select class="input-field" id="gender">
+                    <option value="" disabled selected>Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="input-box">
+                <input type="submit" class="submit" value="Register" onclick="storeEmail()">
+
+                
+
+            </div>
+            <p id="error-message" class="error-message"></p>
+        </div>
+    
+
+     
+          <script>
+            function validateForm() {
+                var name = document.getElementById("name").value;
+                var email = document.getElementById("email").value;
+                var password = document.getElementById("password").value;
+                var phone = document.getElementById("phone").value;
+                var age = document.getElementById("age").value;
+                var gender = document.getElementById("gender").value;
+                var errorMessage = document.getElementById("error-message");
+    
+                if (!name || !email || !password || !phone || !age || !gender) {
+                    errorMessage.textContent = "Please complete all fields.";
+                } else {
+                    errorMessage.textContent = "";
+                    alert("Registration successful!");
+                    window.location.href = "login.html";
+                }
+            }
+            function storeEmail() {
+    var email = document.getElementById("email").value;
+    if (email) {
+        localStorage.setItem("registeredEmail", email);
+        alert("Registration successful!");
+        window.location.href = "login.html";
+    } else {
+        alert("Please enter an email.");
+    }
+}
+
+        </script>
+    
+</body>
+</html>
